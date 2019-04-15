@@ -6,11 +6,29 @@ body {
     padding-top: 10;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 5%;
 }
-.column {
-    float: left;
-    width: 20%;
-    padding: 0px;
-    align-self: auto;
-  }
+img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+        float: left;
+        padding: 2%;
+      }
 
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: darkgray;
+      }
+
+      img:hover {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+  
