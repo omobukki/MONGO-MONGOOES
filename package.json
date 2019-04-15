@@ -1,0 +1,29 @@
+{
+  "name": "MONGO-MONGOOES",
+  "version": "1.0.0",
+  "description": "In this assignment, you'll create a web app that lets users view and leave comments on the latest news. But you're not going to actually write any articles; instead, you'll flex your Mongoose and Cheerio muscles to scrape news from another site.\r Before You Begin\r Create a GitHub repo for this assignment and clone it to your computer. Any name will do -- just make sure it's related to this project in some fashion.\r Run npm init. When that's finished, install and save these npm packages:\r express\r express-handlebars\r mongoose\r cheerio\r axios\r NOTE: If you want to earn complete credit for your work, you must use all five of these packages in your assignment.\r In order to deploy your project to Heroku, you must set up an mLab provision. mLab is remote MongoDB database that Heroku supports natively. Follow these steps to get it running:\r Create a Heroku app in your project directory.\r Run this command in your Terminal/Bash window:\r heroku addons:create mongolab\r This command will add the free mLab provision to your project.\r When you go to connect your mongo database to mongoose, do so the following way:\r // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database\r var MONGODB_URI = process.env.MONGODB_URI || \"mongodb://localhost/mongoHeadlines\";",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mongoose": "^5.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omobukki/MONGO-MONGOOES.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omobukki/MONGO-MONGOOES/issues"
+  },
+  "homepage": "https://github.com/omobukki/MONGO-MONGOOES#readme"
+}
