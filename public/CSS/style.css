@@ -1,0 +1,16 @@
+body {
+    background-color: aquamarine
+}
+#scraping {
+    width: 800px;
+    padding-top: 10;
+    margin-left: auto;
+    margin-right: auto;
+}
+.column {
+    float: left;
+    width: 20%;
+    padding: 0px;
+    align-self: auto;
+  }
+
