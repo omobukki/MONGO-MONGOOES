@@ -10,7 +10,7 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
@@ -22,7 +22,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/scrapper", { useNewUrlParser: true });
+if ( process.env.MONGODB_URI){
+
+  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+}else{
+  
+  mongoose.connect("mongodb://localhost/scrapper", { useNewUrlParser: true })
+}
 
 // A GET route for scraping the echoJS website
 app.get("/scrape", function(req, res) {
@@ -80,6 +86,10 @@ app.get("/articles", function(req, res) {
       res.json(err);
     });
 });
+
+app.get("/", function(req, res) {
+  res.send("index.html")
+})
 
 
 // Start the server
